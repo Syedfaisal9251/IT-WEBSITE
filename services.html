@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Modern IT Company</title>
+    <!-- Tailwind CSS (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link href="..\image\logo.jpg" rel="icon">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header Section (Include header.html) -->
+    <header>
+        <nav class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <img src="..\image\logo.jpg" alt="logo" height="100px" width="150px">
+                <a href="index.html" class="text-2xl font-semibold">IT Company</a>
+                <ul class="flex space-x-6 hidden lg:flex">
+                    <li><a href="index.html" class="hover:text-yellow-500">Home</a></li>
+                    <li><a href="about.html" class="hover:text-yellow-500">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-yellow-500">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-500">Contact</a></li>
+                </ul>
+                <!-- Mobile Hamburger Menu -->
+                <div class="lg:hidden">
+                    <button id="menuToggle" class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-4 hidden">
+            <ul>
+                <li><a href="index.html" class="block py-2 hover:text-yellow-500">Home</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-yellow-500">About Us</a></li>
+                <li><a href="services.html" class="block py-2 hover:text-yellow-500">Services</a></li>
+                <li><a href="portfolio.html" class="block py-2 hover:text-yellow-500">Portfolio</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-yellow-500">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white text-center py-12 sm:py-20">
+        <h1 class="text-3xl sm:text-4xl font-semibold">Our Services</h1>
+        <p class="mt-4 text-lg sm:text-xl">Empowering your business with cutting-edge technology solutions.</p>
+    </section>
+
+    <!-- Service Offerings Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-12" data-aos="fade-up">What We Offer</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 shadow-xl rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Web Development</h3>
+                    <p class="text-gray-700">We specialize in building dynamic, high-performance websites that offer seamless user experiences. Our custom web development services will take your business online.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 shadow-xl rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Mobile App Development</h3>
+                    <p class="text-gray-700">We create interactive and user-friendly mobile applications for iOS and Android. Our team ensures your app is optimized for performance, user experience, and functionality.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 shadow-xl rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">AI Solutions</h3>
+                    <p class="text-gray-700">Harness the power of artificial intelligence to optimize your business processes. From chatbots to predictive analytics, our AI solutions will help you stay ahead of the curve.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 shadow-xl rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Cloud Solutions</h3>
+                    <p class="text-gray-700">Our cloud solutions provide scalable, secure, and reliable infrastructure for your business needs. Migrate to the cloud with our expert services for enhanced efficiency and cost savings.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 shadow-xl rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Cybersecurity</h3>
+                    <p class="text-gray-700">Protect your digital assets with our comprehensive cybersecurity solutions. We safeguard your data, systems, and infrastructure from cyber threats and attacks.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 shadow-xl rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Digital Marketing</h3>
+                    <p class="text-gray-700">Drive traffic and grow your business with our digital marketing strategies. From SEO to social media management, we’ll help you reach your audience and convert leads into customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white py-6">
+        <p class="text-center">© 2025 Modern IT Company</p>
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="/main.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS library for animations
+    </script>
+</body>
+</html>

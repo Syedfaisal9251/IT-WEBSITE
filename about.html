@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Modern IT Company</title>
+    <!-- Tailwind CSS (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <link href="..\image\logo.jpg" rel="icon">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header Section -->
+    <header>
+        <nav class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <img src="..\image\logo.jpg" alt="logo" height="100px" width="150px">
+                <a href="index.html" class="text-2xl font-semibold">IT Company</a>
+                <!-- Mobile Hamburger Menu -->
+                <div class="lg:hidden">
+                    <button id="menuToggle" class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Desktop Navigation Menu -->
+                <ul class="hidden lg:flex space-x-6">
+                    <li><a href="index.html" class="hover:text-yellow-500">Home</a></li>
+                    <li><a href="about.html" class="hover:text-yellow-500">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-yellow-500">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-500">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-4 hidden">
+            <ul>
+                <li><a href="index.html" class="block py-2 hover:text-yellow-500">Home</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-yellow-500">About Us</a></li>
+                <li><a href="services.html" class="block py-2 hover:text-yellow-500">Services</a></li>
+                <li><a href="portfolio.html" class="block py-2 hover:text-yellow-500">Portfolio</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-yellow-500">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- About Us Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white text-center py-20">
+        <h1 class="text-4xl font-semibold">About Us</h1>
+        <p class="mt-4 text-lg">We are a team of passionate innovators and problem-solvers in the IT space.</p>
+    </section>
+
+    <!-- Company Mission Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-6">Our Mission</h2>
+            <p class="text-lg text-gray-700">Our mission is to deliver innovative, sustainable, and scalable IT solutions that empower businesses and improve lives. We focus on transforming ideas into impactful digital products that bring real-world results.</p>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="bg-gray-100 py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-8">Our Core Values</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                    <h3 class="text-xl font-semibold text-blue-600">Innovation</h3>
+                    <p class="mt-4 text-gray-700">We are committed to pushing the boundaries of technology, delivering creative solutions for modern challenges.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                    <h3 class="text-xl font-semibold text-blue-600">Collaboration</h3>
+                    <p class="mt-4 text-gray-700">We believe in the power of teamwork and collaboration, both within our team and with our clients.</p>
+                </div>
+                <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                    <h3 class="text-xl font-semibold text-blue-600">Integrity</h3>
+                    <p class="mt-4 text-gray-700">Honesty and transparency guide our decisions and actions to create trust with our clients and partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team Section -->
+    <section class="py-16 px-6">
+        <h2 class="text-3xl font-semibold text-center mb-8">Meet the Team</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                <img src="../image/ceo.avif" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-blue-600">John Doe</h3>
+                <p class="text-gray-700">CEO & Founder</p>
+            </div>
+            <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                <img src="../image/coo.webp" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-blue-600">Jane Smith</h3>
+                <p class="text-gray-700">Lead Developer</p>
+            </div>
+            <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                <img src="../image/head.webp" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-blue-600">Mark Johnson</h3>
+                <p class="text-gray-700">Head of Design</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white py-6">
+        <p class="text-center">© 2025 Modern IT Company</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/main.js"></script>
+</body>
+</html>

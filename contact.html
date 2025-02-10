@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Modern IT Company</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons for chat button -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="..\image\logo.jpg" rel="icon">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Ensure the mobile menu button stays within the viewport */
+        #menuToggle {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Mobile menu positioning */
+        #mobileMenu {
+            top: 60px;
+        }
+
+        /* Make the chatbot button stay in the correct position */
+        #chatbot-btn {
+            bottom: 16px;
+            right: 16px;
+        }
+    #contact-form {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px whitesmoke;
+}
+    </style>
+    
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header Section -->
+    <header class="h-15 bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="..\image\logo.jpg" alt="logo" height="100px" width="150px">
+            <h1 class="text-2xl font-semibold">IT Company</h1>
+            <nav>
+                <ul class="hidden lg:flex space-x-6">
+                    <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+                    <li><a href="services.html" class="hover:text-gray-300">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-gray-300">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden">
+                <button id="menuToggle" class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-4 hidden">
+        <ul>
+            <li><a href="index.html" class="block py-2 hover:text-gray-300">Home</a></li>
+            <li><a href="about.html" class="block py-2 hover:text-gray-300">About</a></li>
+            <li><a href="services.html" class="block py-2 hover:text-gray-300">Services</a></li>
+            <li><a href="portfolio.html" class="block py-2 hover:text-gray-300">Portfolio</a></li>
+            <li><a href="contact.html" class="block py-2 hover:text-gray-300">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Contact Page Content -->
+    <section class="py-16 px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-4">Get In Touch</h2>
+        <p class="mb-6">Feel free to reach out through the contact form below or chat with us using the chatbot!</p>
+
+        <!-- Contact Form Section -->
+        <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-xl mb-10">
+            <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+            <form id="contact-form">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg font-medium text-white">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your name">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg font-medium text-white">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your email">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg font-medium text-white">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-purple-600 text-white p-3 rounded-lg hover:bg-indigo-700">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Chatbot Button -->
+    <div id="chatbot-btn" class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg cursor-pointer hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-110">
+        <i class="fas fa-comment-alt"></i>
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="fixed bottom-16 right-8 bg-white p-6 w-80 h-96 shadow-xl rounded-lg transform scale-0 transition-all duration-300 ease-in-out">
+        <div class="flex justify-between items-center border-b pb-2 mb-4">
+            <h3 class="text-xl font-semibold text-blue-600">Chat with Us</h3>
+            <button id="close-chat" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+        </div>
+        <div id="chatbox" class="overflow-y-auto h-64 space-y-4">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="flex mt-4">
+            <input type="text" id="user-input" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Type a message...">
+            <button id="send-message" class="ml-2 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Modern IT Company. All rights reserved.</p>
+            <ul class="flex justify-center space-x-4">
+                <li><a href="#" class="hover:text-gray-300">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-gray-300">Terms of Service</a></li>
+                <li><a href="#" class="hover:text-gray-300">Support</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Chatbot and Contact Form -->
+    <script>
+        const chatbotBtn = document.getElementById('chatbot-btn');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const closeChat = document.getElementById('close-chat');
+        const userInput = document.getElementById('user-input');
+        const sendMessageBtn = document.getElementById('send-message');
+        const chatbox = document.getElementById('chatbox');
+
+        // Open chatbot window
+        chatbotBtn.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('scale-0');
+            chatbotWindow.classList.toggle('scale-100');
+            userInput.focus();
+        });
+
+        // Close chatbot window
+        closeChat.addEventListener('click', () => {
+            chatbotWindow.classList.remove('scale-100');
+            chatbotWindow.classList.add('scale-0');
+        });
+
+        // Initial Greeting message
+        window.onload = () => {
+            addMessage("Hi! How can I assist you today? Please choose one of the following options: \n1. About Us\n2. Portfolio\n3. Services\n4. Others", "bot-message");
+        };
+
+        // Send message to the chatbot
+        sendMessageBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (message === '') return;
+
+            // Add user message to chatbox
+            addMessage(message, 'user-message');
+
+            // Clear input field
+            userInput.value = '';
+
+            // Simulate bot response based on the user's message
+            setTimeout(() => {
+                let botMessage = '';
+
+                if (message.toLowerCase().includes('about')) {
+                    botMessage = 'We are a leading IT company specializing in web development, IT consulting, and custom software solutions. Would you like more information?';
+                } else if (message.toLowerCase().includes('portfolio')) {
+                    botMessage = 'Check out our portfolio to see the amazing projects we’ve worked on! Would you like to see some of our case studies?';
+                } else if (message.toLowerCase().includes('services')) {
+                    botMessage = 'We offer a wide range of IT services, including web development, mobile app development, cloud computing, and IT consulting. Which service would you like to learn more about?';
+                } else if (message.toLowerCase().includes('other') || message.toLowerCase().includes('contact')) {
+                    botMessage = 'Thanks for reaching out! For further assistance, please fill out the contact form. We will assist you shortly.';
+                } else {
+                    botMessage = 'I didn’t quite catch that. Could you please choose from the following: "About Us", "Portfolio", "Services", or "Others"?';
+                }
+
+                addMessage(botMessage, 'bot-message');
+            }, 1000);
+        }
+
+        // Function to add messages to chatbox
+        function addMessage(message, className) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', className);
+            messageElement.textContent = message;
+            chatbox.appendChild(messageElement);
+
+            // Scroll to the bottom of the chatbox
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert('Thank you for your message. We will get back to you soon!');
+                contactForm.reset(); // Clear form after submission
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });  
+        document.addEventListener("DOMContentLoaded", () => {
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+});
+    </script>
+
+</body>
+
+</html>
+

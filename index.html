@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern IT Company</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="/style.css">
+    <link href="..\image\logo.jpg" rel="icon">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header Section -->
+    <header>
+        <nav class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <img src="..\image\logo.jpg" alt="logo" height="100px" width="150px">
+                <a href="index.html" class="text-2xl font-semibold">IT Company</a>
+                <!-- Mobile Hamburger Menu -->
+                <div class="lg:hidden">
+                    <button id="menuToggle" class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden lg:flex space-x-6">
+                    <li><a href="index.html" class="hover:text-yellow-500">Home</a></li>
+                    <li><a href="about.html" class="hover:text-yellow-500">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-yellow-500">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-yellow-500">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-500">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden bg-gradient-to-r from-indigo-500  to-purple-600 text-white p-4 hidden">
+            <ul>
+                <li><a href="index.html" class="block py-2 hover:text-yellow-500">Home</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-yellow-500">About Us</a></li>
+                <li><a href="services.html" class="block py-2 hover:text-yellow-500">Services</a></li>
+                <li><a href="portfolio.html" class="block py-2 hover:text-yellow-500">Portfolio</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-yellow-500">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section (Welcome Section) -->
+    <section class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white text-center py-20">
+        <h1 class="text-4xl font-semibold">Transforming Your Digital Presence</h1>
+        <p class="mt-4 text-lg">Innovative IT solutions for a better tomorrow.</p>
+        <a href="services.html" class="hover:text-yellow-500"><button class="bg-yellow-500 text-white px-6 py-3 mt-6 rounded-lg hover:bg-yellow-400 transition">Get
+            Started</button></a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <h2 class="text-3xl font-semibold text-center mb-8">Our Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+            <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                <h3 class="text-xl font-bold">Web Development</h3>
+                <p class="mt-4">High-performance web solutions tailored for your business needs.</p>
+            </div>
+            <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                <h3 class="text-xl font-bold">App Development</h3>
+                <p class="mt-4">Build engaging and interactive mobile experiences.</p>
+            </div>
+            <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                <h3 class="text-xl font-bold">AI Solutions</h3>
+                <p class="mt-4">AI-driven technologies to optimize business operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-indigo-500  to-purple-600 text-white py-6">
+        <p class="text-center">© 2025 Modern IT Company</p>
+    </footer>
+
+    <!-- JavaScript -->
+    
+    <script src="/main.js"></script>
+    
+
+</body>
+
+</html>

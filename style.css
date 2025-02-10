@@ -1,0 +1,179 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8fafc; /* Light background for the whole page */
+    color: #1f2937; /* Text color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #e5e7eb; /* Light gray color on hover */
+}
+
+
+/* Chatbot */
+#chatbot-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#chatbot-btn:hover {
+    background-color: #1d4ed8; /* Darker blue */
+    transform: scale(1.1);
+}
+
+#chatbot-window {
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    width: 300px;
+    max-height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+#chatbot-window.scale-100 {
+    transform: scale(1);
+}
+
+#chatbox {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.message {
+    margin-bottom: 1rem;
+}
+
+.bot-message {
+    text-align: left;
+    background-color: #f1f5f9;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.user-message {
+    text-align: right;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+#user-input {
+    width: 85%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+}
+
+#send-message {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-message:hover {
+    background-color: #1d4ed8; /* Darker blue */
+}
+
+/* Footer */
+footer {
+    background-color: #2563eb;
+    color: white;
+    padding: 2rem;
+}
+
+footer ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #e5e7eb; /* Light gray on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    #chatbot-btn {
+        padding: 0.75rem;
+    }
+
+    #chatbot-window {
+        width: 250px;
+        bottom: 3rem;
+    }
+}
+
+/* Form Error Styles */
+input:invalid, textarea:invalid {
+    border-color: #ef4444; /* Red border for invalid input */
+}
+
+input:valid, textarea:valid {
+    border-color: #34d399; /* Green border for valid input */
+}
